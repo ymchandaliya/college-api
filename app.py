@@ -15,6 +15,10 @@ app.config["SESSION_PERMANENT"]=False
 app.config["SESSION_TYPE"]="filesystem"
 Session(app)
 
+@app.route("/")
+def index():
+    return """Hello world!"""
+
 @app.route("/api/<string:enroll>",methods=["GET"])
 def api(enroll):
     # books=db.execute("select isbn from books where isbn=:isbn",{"isbn":isbn})
