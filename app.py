@@ -4,6 +4,7 @@ import requests
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session,sessionmaker
 from flask import Flask,request,render_template,session,jsonify,make_response
+from flask_session import Session
 
 app=Flask(__name__)
 
